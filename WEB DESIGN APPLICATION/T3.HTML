@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conference Registration</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 16px;
+            background: #eef2f7;
+            color: #172033;
+            font: 16px/1.5 Arial, sans-serif;
+        }
+
+        .form {
+            max-width: 600px;
+            margin: auto;
+            padding: 32px;
+            background: white;
+            border-radius: 14px;
+        }
+
+        .form__group {
+            margin: 18px 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #aab4c4;
+            border-radius: 6px;
+            font: inherit;
+        }
+
+        input:focus,
+        select:focus {
+            outline: 3px solid #bfdbfe;
+            border-color: #2563eb;
+        }
+
+        .form__button {
+            padding: 12px 18px;
+            border: 0;
+            border-radius: 6px;
+            background: #174ea6;
+            color: white;
+            font: inherit;
+            cursor: pointer;
+        }
+
+        #message {
+            margin-top: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="form">
+        <h1>Conference Registration</h1>
+        <p>Complete the form to register for a session.</p>
+
+        <form id="registration">
+            <div class="form__group">
+                <label for="name">Full name</label>
+                <input id="name" name="name" required>
+            </div>
+
+            <div class="form__group">
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" required>
+            </div>
+
+            <div class="form__group">
+                <label for="phone">Phone number</label>
+                <input id="phone" name="phone" type="tel" pattern="[0-9+() -]{7,20}" required>
+            </div>
+
+            <div class="form__group">
+                <label for="session">Choose a session</label>
+                <select id="session" name="session" required>
+                    <option value="">Select a session</option>
+                    <option>Web Accessibility</option>
+                    <option>AI in Education</option>
+                    <option>Modern JavaScript</option>
+                </select>
+            </div>
+
+            <button class="form__button" type="submit">Register</button>
+            <div id="message" role="status" aria-live="polite"></div>
+        </form>
+    </main>
+
+    <script>
+        const form = document.getElementById("registration");
+        const message = document.getElementById("message");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                message.textContent = "Please enter valid information in all fields.";
+                return;
+            }
+
+            message.textContent =
+                "Thank you, " + form.elements.name.value + "! You are registered.";
+            form.reset();
+        });
+    </script>
+</body>
+
+</html>

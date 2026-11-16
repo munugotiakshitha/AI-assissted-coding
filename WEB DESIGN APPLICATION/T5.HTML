@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restaurant Menu</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #fbf7ed;
+            color: #292c24;
+            font: 16px/1.55 Georgia, serif;
+        }
+
+        .menu {
+            max-width: 1000px;
+            margin: auto;
+            padding: 45px 6%;
+        }
+
+        .menu__header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .menu__header h1 {
+            color: #315b43;
+            font-size: 48px;
+            margin: 8px;
+        }
+
+        .menu__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 18px;
+        }
+
+        .menu__item {
+            padding: 20px;
+            background: #fffdf8;
+            border: 1px solid #e7dfcf;
+            border-radius: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .menu__item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 24px #315b4320;
+        }
+
+        .menu__top {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .menu__item h2 {
+            margin: 0;
+            color: #315b43;
+            font-size: 21px;
+        }
+
+        .menu__price {
+            color: #b65e3c;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .menu__item p {
+            color: #62645d;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="menu">
+        <header class="menu__header">
+            <p>FRESH · LOCAL · SEASONAL</p>
+            <h1>Olive & Thyme</h1>
+            <p>Good food, made with care</p>
+        </header>
+
+        <section class="menu__grid" aria-label="Restaurant menu">
+            <article class="menu__item">
+                <div class="menu__top">
+                    <h2>Tomato Bruschetta</h2><span class="menu__price">₹240</span>
+                </div>
+                <p>Toasted bread topped with tomatoes, basil, and olive oil.</p>
+            </article>
+
+            <article class="menu__item">
+                <div class="menu__top">
+                    <h2>Garden Salad</h2><span class="menu__price">₹320</span>
+                </div>
+                <p>Fresh greens, cucumber, tomatoes, and lemon dressing.</p>
+            </article>
+
+            <article class="menu__item">
+                <div class="menu__top">
+                    <h2>Mushroom Pasta</h2><span class="menu__price">₹460</span>
+                </div>
+                <p>Pasta with mushrooms, herbs, and a light cream sauce.</p>
+            </article>
+
+            <article class="menu__item">
+                <div class="menu__top">
+                    <h2>Grilled Paneer</h2><span class="menu__price">₹390</span>
+                </div>
+                <p>Herb-marinated paneer served with roasted vegetables.</p>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

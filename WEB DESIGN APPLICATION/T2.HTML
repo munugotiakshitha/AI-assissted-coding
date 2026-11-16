@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            background: #f5f5f4;
+            color: #292524;
+            font: 16px/1.5 Arial, sans-serif;
+        }
+
+        .product {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 24px;
+            background: white;
+            border-radius: 14px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .product__image {
+            min-height: 300px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            background: #dce8d5;
+            font-size: 100px;
+        }
+
+        .product__price {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .product__button {
+            padding: 12px 20px;
+            background: #365c45;
+            border: 0;
+            border-radius: 7px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .product__button:hover {
+            background: #274434;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 650px) {
+            .product {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="product">
+        <div class="product__image" role="img" aria-label="Green water bottle">🍃</div>
+
+        <section>
+            <p>EVERYDAY ESSENTIALS</p>
+            <h1 class="product__title">Reusable Water Bottle</h1>
+            <p class="product__price">₹899</p>
+            <p>A durable bottle for school, work, or travel.</p>
+            <button class="product__button" id="addToCart">Add to Cart</button>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById("addToCart").addEventListener("click", function () {
+            alert("The water bottle was added to your cart!");
+        });
+    </script>
+</body>
+
+</html>

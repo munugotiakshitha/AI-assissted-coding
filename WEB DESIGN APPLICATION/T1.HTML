@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font: 16px/1.6 Arial, sans-serif;
+            color: #172554;
+            background: #f8fafc;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            padding: 16px 8%;
+            background: white;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav a {
+            color: #172554;
+            margin-left: 18px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #0f766e;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 32px 8%;
+        }
+
+        .hero {
+            padding: 60px 0;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 8vw, 72px);
+            margin: 8px 0;
+        }
+
+        .hero p {
+            max-width: 600px;
+            color: #475569;
+        }
+
+        section {
+            padding: 28px 0;
+            scroll-margin-top: 70px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #0f766e;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #475569;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <strong>My Portfolio</strong>
+            <div>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <p>STUDENT AND WEB DEVELOPER</p>
+            <h1>Hello, I’m Your Name</h1>
+            <p>I enjoy creating useful and easy-to-use websites. Welcome to my portfolio.</p>
+            <a class="button" href="#projects">View my projects</a>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a student interested in web design and development. I enjoy learning HTML, CSS, and JavaScript.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <article class="card">
+                    <h3>Student Portal</h3>
+                    <p>A sample website for students to find useful information.</p>
+                </article>
+                <article class="card">
+                    <h3>Online Store</h3>
+                    <p>A simple product page created with HTML and CSS.</p>
+                </article>
+                <article class="card">
+                    <h3>Event Website</h3>
+                    <p>A website that shares event details and registration information.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email me to discuss a project or opportunity.</p>
+            <a class="button" href="mailto:yourname@example.com">Send Email</a>
+        </section>
+    </main>
+
+    <footer>© 2026 Your Name</footer>
+</body>
+
+</html>

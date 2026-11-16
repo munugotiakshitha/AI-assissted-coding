@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Name | Resume</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            color: #1c2735;
+            background: #f7f9fb;
+            font: 16px/1.6 Arial, sans-serif;
+        }
+
+        header {
+            padding: 30px 7%;
+            background: #183153;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            padding: 14px 7%;
+            background: white;
+        }
+
+        nav a {
+            margin-right: 18px;
+            color: #183153;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 24px 7%;
+        }
+
+        .resume {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+        }
+
+        .column {
+            display: grid;
+            align-content: start;
+            gap: 18px;
+        }
+
+        .section {
+            padding: 20px;
+            background: white;
+            border: 1px solid #e0e6ec;
+            border-radius: 9px;
+            scroll-margin-top: 70px;
+        }
+
+        .section h2 {
+            margin-top: 0;
+            color: #183153;
+        }
+
+        @media (max-width: 650px) {
+            .resume {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <p>Student | yourname@example.com</p>
+    </header>
+
+    <nav aria-label="Resume sections">
+        <a href="#profile">Profile</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+    </nav>
+
+    <main class="resume">
+        <div class="column">
+            <section class="section" id="profile">
+                <h2>Profile Summary</h2>
+                <p>I am a motivated student interested in web development and creating accessible websites.</p>
+            </section>
+
+            <section class="section" id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML and CSS</li>
+                    <li>JavaScript</li>
+                    <li>Responsive design</li>
+                    <li>Communication and teamwork</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="column">
+            <section class="section" id="education">
+                <h2>Education</h2>
+                <h3>B.Tech in Computer Science</h3>
+                <p>Your College Name | 2022–2026</p>
+                <p>Relevant subjects: Web Development, Databases, and Software Engineering.</p>
+            </section>
+
+            <section class="section" id="experience">
+                <h2>Experience</h2>
+                <h3>Web Development Intern</h3>
+                <p>Company Name | 2025</p>
+                <p>Created and updated web pages using HTML, CSS, and JavaScript.</p>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
